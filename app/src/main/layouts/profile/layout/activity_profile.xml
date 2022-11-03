@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="profileImage"
+            type="String" />
+
+        <variable
+            name="name"
+            type="String" />
+
+        <variable
+            name="mobileNumber"
+            type="String" />
+
+        <variable
+            name="emailId"
+            type="String" />
+
+        <variable
+            name="address"
+            type="String" />
+
+        <variable
+            name="isAadharVerified"
+            type="boolean" />
+
+        <variable
+            name="isAadharAdded"
+            type="boolean" />
+
+        <variable
+            name="rating"
+            type="float" />
+
+        <variable
+            name="totalRating"
+            type="int" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_toolbar"
+            app:enableEditButton="@{ true }"
+            app:title="@{ @string/profile }" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="132dp"
+                    android:layout_height="132dp"
+                    android:layout_marginTop="20dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_profile_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/profile_placeholder"
+                        app:loadImageFromNetwork="@{ profileImage }"
+                        app:placeholder="@{ @drawable/profile_placeholder }" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/edit_profile_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="2dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="1dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_round_camera_alt"
+                            tools:ignore="ContentDescription" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/gray_600"
+                    android:textSize="20sp"
+                    app:camelCaseText="@{ name }"
+                    app:fontFamily="@font/sarabun_semibold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/solid_orange_op10_r24"
+                    android:gravity="center_horizontal"
+                    android:includeFontPadding="false"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:text="@string/farmer"
+                    android:textColor="@color/orange"
+                    android:textSize="14sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rating_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="26dp"
+                    android:background="@drawable/solid_gray_50_r8">
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="12dp"
+                        android:numStars="5"
+                        android:progressTint="@color/orange"
+                        android:rating="@{ rating }"
+                        android:stepSize="0.1"
+                        app:layout_constraintBottom_toTopOf="@+id/textView5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:includeFontPadding="false"
+                        android:text="@{ @string/total_rating_format(totalRating) }"
+                        android:textColor="@color/gray_600"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/sarabun_semibold"
+                        app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+                        app:layout_constraintStart_toEndOf="@+id/ratingBar"
+                        app:layout_constraintTop_toTopOf="@+id/ratingBar" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginBottom="12dp"
+                        android:includeFontPadding="false"
+                        android:text="@{ @string/d_out_of_5(rating) }"
+                        android:textColor="@color/gray_600"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/sarabun_semibold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="4dp"
+                        android:padding="6dp"
+                        android:src="@drawable/ic_round_arrow_forward"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/gray_400"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/personal_details_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/green_alpha_10"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:includeFontPadding="false"
+                        android:text="@string/personal_information"
+                        android:textColor="@color/gray_600"
+                        android:textSize="18sp"
+                        app:fontFamily="@font/sarabun_bold" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="4dp"
+                        android:padding="6dp"
+                        android:src="@drawable/ic_round_arrow_forward"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/gray_400"
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/personal_details_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/green_alpha_10"
+                    android:visibility="gone">
+
+                    <View
+                        android:id="@+id/personal_details_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@color/gray_100"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/name_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/name"
+                        android:textColor="@color/gray_400"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/personal_details_divider" />
+
+                    <TextView
+                        android:id="@+id/name_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="16dp"
+                        android:includeFontPadding="false"
+                        android:text="Scarlett Masison"
+                        android:textColor="@color/gray_600"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/sarabun_medium"
+                        app:layout_constraintEnd_toStartOf="@id/age_container"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/name_text" />
+
+                    <LinearLayout
+                        android:id="@+id/age_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/solid_white_r24"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/personal_details_divider">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/age"
+                            android:textColor="@color/gray_400"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:includeFontPadding="false"
+                            android:text="24"
+                            android:textColor="@color/gray_600"
+                            android:textSize="14sp"
+                            app:fontFamily="@font/sarabun_medium" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/email_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/email_id"
+                        android:textColor="@color/gray_400"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/name_value" />
+
+                    <TextView
+                        android:id="@+id/email_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:includeFontPadding="false"
+                        android:text="scarlettmasison@gmail.com"
+                        android:textColor="@color/gray_600"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/sarabun_medium"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/email_text" />
+
+                    <TextView
+                        android:id="@+id/district_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/district"
+                        android:textColor="@color/gray_400"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/email_value" />
+
+                    <TextView
+                        android:id="@+id/district_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="8dp"
+                        android:includeFontPadding="false"
+                        android:text="Almora"
+                        android:textColor="@color/gray_600"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/sarabun_medium"
+                        app:layout_constraintEnd_toStartOf="@id/guideline"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/district_text" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <TextView
+                        android:id="@+id/block_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/block"
+                        android:textColor="@color/gray_400"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toEndOf="@id/guideline"
+                        app:layout_constraintTop_toBottomOf="@id/email_value" />
+
+                    <TextView
+                        android:id="@+id/block_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:includeFontPadding="false"
+                        android:text="Bajpur"
+                        android:textColor="@color/gray_600"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/sarabun_medium"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@id/guideline"
+                        app:layout_constraintTop_toBottomOf="@id/block_text" />
+
+                    <LinearLayout
+                        android:id="@+id/call_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center|top"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/block_value"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/call_icon"
+                            app:tint="@color/gray_600"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_weight="1"
+                            android:includeFontPadding="false"
+                            android:text="+91 7894561230"
+                            android:textColor="@color/gray_600"
+                            android:textSize="16sp"
+                            app:fontFamily="@font/sarabun_medium" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="24dp"
+                        android:gravity="center|top"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/call_container"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/email_icon"
+                            app:tint="@color/gray_600"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_weight="1"
+                            android:includeFontPadding="false"
+                            android:text="rameshkumar478@gmail.com"
+                            android:textColor="@color/gray_600"
+                            android:textSize="16sp"
+                            app:fontFamily="@font/sarabun_medium" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/additional_details_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/green_alpha_10"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:includeFontPadding="false"
+                        android:text="@string/additional_information"
+                        android:textColor="@color/gray_600"
+                        android:textSize="18sp"
+                        app:fontFamily="@font/sarabun_bold" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="4dp"
+                        android:padding="6dp"
+                        android:src="@drawable/ic_round_arrow_forward"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/gray_400"
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/additional_details_conatiner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/green_alpha_10"
+                    android:visibility="gone">
+
+                    <View
+                        android:id="@+id/additional_details_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@color/gray_100"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/educational_details_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/educational_qualification"
+                        android:textColor="@color/gray_400"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/additional_details_divider" />
+
+                    <TextView
+                        android:id="@+id/educational_details_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:includeFontPadding="false"
+                        android:text="Illiterate (below primary) | Self-taught"
+                        android:textColor="@color/gray_600"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/sarabun_medium"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/educational_details_text" />
+
+                    <TextView
+                        android:id="@+id/caste_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/caste"
+                        android:textColor="@color/gray_400"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/educational_details_value" />
+
+                    <TextView
+                        android:id="@+id/caste_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="8dp"
+                        android:includeFontPadding="false"
+                        android:text="Open/General"
+                        android:textColor="@color/gray_600"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/sarabun_medium"
+                        app:layout_constraintEnd_toStartOf="@id/guideline2"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/caste_text" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <TextView
+                        android:id="@+id/belong_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/belong_shg_s"
+                        android:textColor="@color/gray_400"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toEndOf="@id/guideline2"
+                        app:layout_constraintTop_toBottomOf="@id/educational_details_value" />
+
+                    <TextView
+                        android:id="@+id/belong_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:includeFontPadding="false"
+                        android:text="Yes"
+                        android:textColor="@color/gray_600"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/sarabun_medium"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@id/guideline2"
+                        app:layout_constraintTop_toBottomOf="@id/belong_text" />
+
+                    <TextView
+                        android:id="@+id/listed_under_secc_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="20dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/listed_under_socio_economic_caste_center_secc"
+                        android:textColor="@color/gray_400"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/caste_value" />
+
+                    <TextView
+                        android:id="@+id/listed_under_secc_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:includeFontPadding="false"
+                        android:text="No"
+                        android:textColor="@color/gray_600"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/sarabun_medium"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/listed_under_secc_text" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/farm_non_farm_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/solid_white_r8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/listed_under_secc_value">
+
+                        <TextView
+                            android:id="@+id/type_of_livelihood_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="16dp"
+                            android:includeFontPadding="false"
+                            android:text="@string/type_of_livelihood"
+                            android:textColor="@color/gray_400"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/type_of_livelihood_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="16dp"
+                            android:includeFontPadding="false"
+                            android:text="Farm"
+                            android:textColor="@color/gray_600"
+                            android:textSize="16sp"
+                            app:fontFamily="@font/sarabun_medium"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/type_of_livelihood_text"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <TextView
+                            android:id="@+id/ownership_type_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:includeFontPadding="false"
+                            android:text="@string/land_ownership_type"
+                            android:textColor="@color/gray_400"
+                            android:textSize="13sp"
+                            app:layout_constraintEnd_toStartOf="@id/guideline3"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/type_of_livelihood_value" />
+
+                        <TextView
+                            android:id="@+id/ownership_type_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="16dp"
+                            android:includeFontPadding="false"
+                            android:text="Owned | Leased"
+                            android:textColor="@color/gray_600"
+                            android:textSize="16sp"
+                            app:fontFamily="@font/sarabun_medium"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/guideline3"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/ownership_type_text" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.5" />
+
+                        <TextView
+                            android:id="@+id/total_land_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:includeFontPadding="false"
+                            android:text="@string/total_cultivable_land"
+                            android:textColor="@color/gray_400"
+                            android:textSize="13sp"
+                            app:layout_constraintEnd_toStartOf="@id/in_nail_text"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toEndOf="@id/guideline3"
+                            app:layout_constraintTop_toBottomOf="@id/type_of_livelihood_value" />
+
+                        <TextView
+                            android:id="@+id/in_nail_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:includeFontPadding="false"
+                            android:text="@string/in_nail"
+                            android:textColor="@color/gray_400"
+                            android:textSize="9sp"
+                            app:layout_constraintBottom_toBottomOf="@id/total_land_text"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/total_land_text"
+                            app:layout_constraintTop_toTopOf="@id/total_land_text"
+                            app:layout_constraintVertical_bias="1.0" />
+
+                        <TextView
+                            android:id="@+id/total_land_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:includeFontPadding="false"
+                            android:text="4875"
+                            android:textColor="@color/gray_600"
+                            android:textSize="16sp"
+                            app:fontFamily="@font/sarabun_medium"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@id/guideline3"
+                            app:layout_constraintTop_toBottomOf="@id/total_land_text" />
+
+                        <androidx.constraintlayout.widget.Group
+                            android:id="@+id/group"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:constraint_referenced_ids="ownership_type_text,ownership_type_value,guideline3,total_land_text,in_nail_text,total_land_value" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/livelihood_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="20dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/livelihood_activity_annual_income"
+                        android:textColor="@color/gray_400"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/farm_non_farm_container" />
+
+                    <TextView
+                        android:id="@+id/livelihood_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="24dp"
+                        android:includeFontPadding="false"
+                        android:text="No"
+                        android:textColor="@color/gray_600"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/sarabun_medium"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/livelihood_text" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center|top"
+                    android:padding="16dp"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/call_icon"
+                        app:tint="@color/gray_600"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/gray_600"
+                        android:textSize="18sp"
+                        app:camelCaseText="@{ @string/mobile_number_format(mobileNumber) }"
+                        app:fontFamily="@font/sarabun_semibold" />
+
+                </LinearLayout>-->
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|top"
+                    android:padding="16dp"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/email_icon"
+                        app:tint="@color/gray_600"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:includeFontPadding="false"
+                        android:text="@{ emailId }"
+                        android:textColor="@color/gray_600"
+                        android:textSize="18sp"
+                        app:fontFamily="@font/sarabun_semibold" />
+
+                </LinearLayout>-->
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|top"
+                    android:padding="16dp"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/location_icon"
+                        app:tint="@color/gray_600"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/gray_600"
+                        android:textSize="18sp"
+                        app:camelCaseText="@{ address }"
+                        app:fontFamily="@font/sarabun_semibold" />
+
+                </LinearLayout>-->
+
+                <!--<View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/gray_100" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="16dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/documents"
+                    android:textColor="@color/gray_600"
+                    android:textSize="20sp"
+                    app:fontFamily="@font/sarabun_bold" />
+
+                <include
+                    android:id="@+id/doc_type_aadhar"
+                    layout="@layout/list_item_document_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="30dp"
+                    app:fileName="@{ @string/aadhar_card_file }"
+                    app:isAdded="@{ isAadharAdded }"
+                    app:isVerified="@{ isAadharVerified }"
+                    app:title="@{ @string/aadhar_card }" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@color/gray_100" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="18dp"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:includeFontPadding="false"
+                        android:text="@string/interests"
+                        android:textColor="@color/gray_600"
+                        android:textSize="20sp"
+                        app:fontFamily="@font/sarabun_bold" />
+
+                    <TextView
+                        android:id="@+id/edit_interest_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:padding="4dp"
+                        android:text="@string/edit"
+                        android:textColor="@color/orange"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_View"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingBottom="24dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="3" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

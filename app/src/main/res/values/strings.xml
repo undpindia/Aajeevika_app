@@ -1,0 +1,241 @@
+<resources>
+    <string name="select_lang_english" translatable="false">English</string>
+    <string name="select_lang_hindi" translatable="false">हिन्दी</string>
+    <string name="otp_view_hint" translatable="false">-</string>
+    <string name="english_a" translatable="false">A</string>
+    <string name="hindi_a" translatable="false">अ</string>
+
+    <string name="login">Login</string>
+    <string name="forgot_password_">Forgot Password?</string>
+    <string name="click_to_register">Click to Register</string>
+    <string name="email_phone_number">Email/Phone Number</string>
+    <string name="email_phone_number_required">Email/Phone Number *</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+
+    <string name="choose_language">Choose Language</string>
+    <string name="please_select_preferred_language">Please select preferred language</string>
+    <string name="proceed">Proceed</string>
+    <string name="english">English</string>
+    <string name="hindi">Hindi</string>
+    <string name="selected_language">English</string>
+
+    <string name="no_internet_connection">No Internet Connection. Please Try Again!</string>
+    <string name="ok">OK</string>
+    <string name="loading">Loading…</string>
+    <string name="logout_confirmation_message">Are you sure you want to Logout?</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes_logout">Yes, Logout</string>
+    <string name="hindi_default_lang">Hindi</string>
+
+    <string name="name">Name</string>
+    <string name="email_id">Email Id</string>
+    <string name="mobile_no">Mobile No.</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+
+    <string name="name_required">Name *</string>
+    <string name="email_id_required">Email Id *</string>
+    <string name="mobile_no_required">Mobile No. *</string>
+    <string name="password_required">Password *</string>
+    <string name="confirm_password_required">Confirm Password *</string>
+
+    <string name="verify">Verify</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="remaining_d_sec">Remaining: %s sec</string>
+    <string name="register">Register</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_an_account">Already have an account ?</string>
+    <string name="click_to_login">Click to Login</string>
+    <string name="register_agreement"><![CDATA[Check to agree with our Terms & Conditions and Privacy Policy.]]></string>
+    <string name="terms_and_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="save">Save</string>
+
+    <string name="enter_mobile_or_email">Enter Mobile No/Email Id</string>
+    <string name="invalid_mobile_or_email">Invalid Mobile No/Email Id</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="password_length_error">Password must have at least 8 characters</string>
+    <string name="enter_new_password">Enter new password</string>
+    <string name="password_doesnt_match">Password doesn\'t match</string>
+
+    <string name="block">Block</string>
+    <string name="pin">Pin</string>
+    <string name="district">District</string>
+    <string name="state">State</string>
+    <string name="country">Country</string>
+    <string name="address_line_1">Address line 1</string>
+    <string name="address_line_2">Address line 2</string>
+
+    <string name="block_required">Block *</string>
+    <string name="pin_required">Pin *</string>
+    <string name="district_required">District *</string>
+    <string name="state_required">State *</string>
+    <string name="country_required">Country *</string>
+    <string name="address_line_1_required">Address line 1 *</string>
+
+    <string name="select_profile_image">Select a profile image</string>
+    <string name="change_mobile">Change Mobile</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="forgot_password_message">Enter registered Mobile number to get otp to reset your password</string>
+    <string name="change_mobile_number_message">Enter Mobile number to get otp to change your mobile number</string>
+    <string name="accept_terms_conditions_and_privacy_policy"><![CDATA[Accept terms & conditions and privacy policy to continue]]></string>
+    <string name="enter_valid_mobile_number">Enter a valid mobile number</string>
+    <string name="verify_contact">Verify Contact</string>
+    <string name="enter_4_digit_otp_sent_to_s">Enter 4 digit OTP sent to %s</string>
+    <string name="fill_all_the_fields">Fill all the fields</string>
+    <string name="submit">Submit</string>
+    <string name="grievance">Grievance</string>
+    <string name="suvidha">Suvidha</string>
+    <string name="sadhan">Sadhan</string>
+    <string name="sarvottam_prathaye">Sarvottam Prathaye</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="faqs">FAQ\'s</string>
+    <string name="enter_valid_otp">Enter valid OTP</string>
+    <string name="aadhar_card">Aadhar Card</string>
+    <string name="aadhar_card_number">Aadhar Card Number</string>
+    <string name="name_as_per_aadhar">Name As Per Aadhar</string>
+    <string name="dob_as_per_aadhar">DOB As Per Aadhar</string>
+    <string name="upload_front_image_of_aadhar">Upload Front Aadhar Image</string>
+    <string name="upload_back_image_of_aadhar">Upload Back Aadhar Image</string>
+    <string name="aadhar_card_number_required">Aadhar Card Number *</string>
+    <string name="name_as_per_aadhar_required">Name As Per Aadhar *</string>
+    <string name="dob_as_per_aadhar_required">DOB As Per Aadhar *</string>
+    <string name="upload_front_image_of_aadhar_required">Upload Front Aadhar Image *</string>
+    <string name="upload_back_image_of_aadhar_required">Upload Back Aadhar Image *</string>
+    <string name="registered_address">Registered Address</string>
+    <string name="upload_underline"><u>Upload</u></string>
+    <string name="please_enter_following_details">Please Enter Following Details</string>
+    <string name="document">Document</string>
+
+    <string name="enter_valid_aadhar_number">Enter a valid aadhar number</string>
+    <string name="enter_valid_aadhar_name">Enter name as per aadhar</string>
+    <string name="enter_valid_aadhar_dob">Enter DOB as per aadhar</string>
+    <string name="enter_valid_aadhar_front_image">Select aadhar image (Front)</string>
+    <string name="enter_valid_aadhar_back_image">Select aadhar image (Back)</string>
+
+    <string name="permission_required">Permission Required</string>
+    <string name="permission_required_message"><![CDATA[Location permission is required for this feature. It can be enabled under phone settings > Apps > Wah > Permissions]]></string>
+    <string name="go_to_setting">Go To Setting</string>
+    <string name="enter_country">Enter Country</string>
+    <string name="enter_state">Enter State</string>
+    <string name="enter_city">Enter District</string>
+    <string name="enter_pin">Enter Pin</string>
+    <string name="enter_block">Enter block</string>
+    <string name="logout">Logout</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="faq">FAQ</string>
+    <string name="my_chat">My Chat</string>
+    <string name="my_sales">My Sales</string>
+    <string name="search">Search</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="or">OR</string>
+    <string name="youtube_link">Youtube Link</string>
+    <string name="how_to_add_an_photo">How would you like to add an photo?</string>
+
+    <string name="upload_document">Upload Document</string>
+    <string name="notifications">Notifications</string>
+    <string name="verified">Verified</string>
+    <string name="unverified">Unverified</string>
+    <string name="profile">Profile</string>
+    <string name="total_rating_format">(%d)</string>
+    <string name="d_out_of_5">%.1f out of 5</string>
+    <string name="mobile_number_format">+91 %s</string>
+    <string name="documents">Documents</string>
+    <string name="aadhar_card_file">aadhar_card.jpg</string>
+    <string name="farmer">Farmer</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="address">Address</string>
+    <string name="address_required">Address *</string>
+    <string name="change_address">Change Address</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="edit">Edit</string>
+    <string name="rating_and_reviews">Rating and Reviews</string>
+    <string name="select_interest">Select Interest</string>
+    <string name="version_s">Version %s</string>
+    <string name="select_five_interests">Select 5 interests</string>
+    <string name="matching_sellers">Matchmaking Seller</string>
+    <string name="chat">Chat</string>
+    <string name="my_favourite_individuals">My Favourite Individuals</string>
+    <string name="buyer_id_">Buyer ID:</string>
+    <string name="price_">Price:</string>
+    <string name="qty_">Qty:</string>
+    <string name="quantity_format">%s %s</string>
+    <string name="price_per_key_format">₹%s/%s</string>
+    <string name="add_new_sale">Add New Sale</string>
+    <string name="sales">Sales</string>
+    <string name="add_products_underline"><u>Add Products</u></string>
+    <string name="feedback_for_buyer">Feedback for buyer</string>
+    <string name="feedback_for_buyer_required">Feedback for buyer *</string>
+    <string name="date_of_sale">Date of Sale</string>
+    <string name="clf_email_address">CLF Email Address</string>
+    <string name="clf_phone_number">CLF Phone Number</string>
+    <string name="name_of_clf">Name Of CLF</string>
+    <string name="interest_quantity_format">Qty: %s %s.</string>
+
+    <string name="please_enter_at_least_one_product">Please add minimum 1 product</string>
+    <string name="please_add_a_review_for_this_sale">Please add a review for this sale</string>
+    <string name="please_rate_this_sale">Please rate this sale</string>
+    <string name="done">Done</string>
+    <string name="add_products">Add Products</string>
+    <string name="search_products">Search Products</string>
+    <string name="interests">Interests</string>
+    <string name="buyer_id">Buyer ID:</string>
+    <string name="sale_detail">Sale Details</string>
+    <string name="select_a_clf">Select a CLF</string>
+    <string name="contact_us">Contact Us</string>
+
+    <string name="about_us">About Us</string>
+    <string name="about_us_message">The Uttarakhand State Rural Livelihood Mission (USRLM) Aajeevika App has been developed by United Nations Development Programme (UNDP) to provide an online platform for the information dissemination of Government Schemes and programmes which can lead to resource mobilization for livelihoods promotion of rural women in the State. The Uttarakhand Aajeevika App was launched by Hon’ble Chief Minister of Uttarakhand on 18th Jan 2021. The app will also provide essential information on NRLM, feedback and grievances by SHG women, best practices for livelihoods promotions etc. A second edition of the application, Ajeevika 2.0 which is a marketplace platform developed for integrating marketing linkages for SHG products and to support in long-term recovery of rural economy through SHGs.</string>
+
+
+    <string name="raise_tickets">Raise Ticket</string>
+    <string name="select_issue">Select Issue</string>
+    <string name="explain_your_concern">Explain your concern here.</string>
+    <string name="select_issue_required">Select Issue *</string>
+    <string name="explain_your_concern_required">Explain your concern here. *</string>
+    <string name="survey">Survey</string>
+    <string name="ticket_no">Ticket no:</string>
+    <string name="created_on">Created on:</string>
+    <string name="open">Open</string>
+    <string name="closed">Closed</string>
+    <string name="type_message_here">Type message here</string>
+    <string name="you">You</string>
+    <string name="aajeevika">Aajeevika</string>
+    <string name="published_on">Published on:</string>
+    <string name="expire_on">Expire on:</string>
+    <string name="take_a_survey">Take a Survey</string>
+    <string name="expired">Expired</string>
+    <string name="survey_expired">Survey Expired</string>
+    <string name="ticket_closed_message">This ticket has been marked closed. In case if your issue is not resolved, open a new ticket.</string>
+    <string name="share_your_number">Share your Number</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="how_can_we_help_nyou_today">How can we help\nyou today</string>
+    <string name="downloading_s">Downloading %s</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="additional_information">Additional Information</string>
+    <string name="age">Age</string>
+    <string name="educational_qualification">Educational Qualification</string>
+    <string name="educational_qualification_required">Educational Qualification *</string>
+    <string name="listed_under_socio_economic_caste_center_secc">Listed under Socio economic caste center (SECC)</string>
+    <string name="are_you_listed_under_socio_economic_caste_center_secc">Are you listed under Socio economic caste center (SECC)? *</string>
+    <string name="belong_shg_s">Belong SHG(s)</string>
+    <string name="caste">Caste</string>
+    <string name="caste_required">Caste *</string>
+    <string name="livelihood_activity_annual_income">Livelihood Activity Annual Income</string>
+    <string name="land_ownership_type">Land Ownership Type</string>
+    <string name="total_cultivable_land">Total Cultivable land</string>
+    <string name="in_nail">(in nali)</string>
+    <string name="type_of_livelihood">Type of Livelihood</string>
+    <string name="date_of_birth_required">Date of Birth *</string>
+    <string name="do_you_belong_to_any_shg_s">Do you belong to any SHG(s)? *</string>
+    <string name="what_type_of_livelihood_are_you_into">What type of livelihood are you into? *</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="maybe_not_sure">Maybe|Not Sure</string>
+    <string name="farm">Farm</string>
+    <string name="non_farm">Non-farm</string>
+    <string name="total_cultivated_land_in_nali">Total Cultivated land (in nali) *</string>
+    <string name="what_is_annual_income_from_the_livelihood_activity">What is annual Income from the livelihood activity? *</string>
+
+</resources>

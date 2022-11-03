@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="choose_language">भाषा चुनें</string>
+    <string name="please_select_preferred_language">कृपया पसंदीदा भाषा चुनें</string>
+    <string name="proceed">आगे बढ़े</string>
+    <string name="english">अंग्रेज़ी</string>
+    <string name="hindi">हिन्दी</string>
+
+    <string name="login">लॉग इन करें</string>
+    <string name="forgot_password_">पासवर्ड भूल गए?</string>
+    <string name="click_to_register">रजिस्टर करने के लिए क्लिक करें</string>
+    <string name="email_phone_number">ईमेल/फोन नंबर</string>
+    <string name="email_phone_number_required">ईमेल/फोन नंबर *</string>
+    <string name="don_t_have_an_account">खाता नहीं है?</string>
+
+    <string name="no_internet_connection">इंटरनेट कनेक्शन उपलब्ध नहीं। कृपया पुन: प्रयास करें!</string>
+    <string name="ok">ठीक है</string>
+    <string name="loading">लोड हो रहा है…</string>
+    <string name="logout_confirmation_message">क्या आप लॉग आउट करना चाहते हैं?</string>
+    <string name="cancel">रद्द करे</string>
+    <string name="yes_logout">हाँ, लॉगआउट</string>
+    <string name="hindi_default_lang">हिन्दी</string>
+    <string name="selected_language">हिन्दी</string>
+
+    <string name="name">नाम</string>
+    <string name="email_id">ईमेल आईडी</string>
+    <string name="mobile_no">मोबाइल नंबर</string>
+    <string name="password">पासवर्ड</string>
+    <string name="confirm_password">पासवर्ड कन्फर्म कीजिये</string>
+
+    <string name="name_required">नाम *</string>
+    <string name="email_id_required">ईमेल आईडी *</string>
+    <string name="mobile_no_required">मोबाइल नंबर *</string>
+    <string name="password_required">पासवर्ड *</string>
+    <string name="confirm_password_required">पासवर्ड कन्फर्म कीजिये *</string>
+
+    <string name="verify">सत्यापित करें</string>
+    <string name="resend_otp">ओटीपी पुनः भेजें</string>
+    <string name="remaining_d_sec">शेष: %d सेकंड</string>
+    <string name="register">रजिस्टर करें</string>
+    <string name="sign_up">साइन अप करें</string>
+    <string name="already_have_an_account">पहले से ही खाता है ?</string>
+    <string name="click_to_login">लॉग इन करने के लिए क्लिक करें</string>
+    <string name="register_agreement"><![CDATA[हमारे नियम व शर्तों और प्राइवेसी पॉलिसी से सहमति के लिए यहाँ क्लिक करें ।]]></string>
+    <string name="terms_and_conditions"><![CDATA[नियम व शर्तों]]></string>
+    <string name="privacy_policy"><![CDATA[प्राइवेसी पॉलिसी]]></string>
+    <string name="save">सेव करे</string>
+
+    <string name="enter_mobile_or_email">मोबाइल नंबर/ईमेल आईडी दर्ज करें</string>
+    <string name="invalid_mobile_or_email">अमान्य मोबाइल नंबर/ईमेल आईडी</string>
+    <string name="enter_password">पास वर्ड दर्ज करें</string>
+    <string name="password_length_error">पासवर्ड में कम से कम 8 अक्षर होने चाहिए</string>
+    <string name="enter_new_password">नया पासवर्ड दर्ज करें</string>
+    <string name="password_doesnt_match">पासवर्ड मेल नहीं खाता</string>
+
+    <string name="pin">पिन</string>
+    <string name="district">ज़िला</string>
+    <string name="country">देश</string>
+    <string name="state">राज्य</string>
+    <string name="address_line_2">पता क्रम 2</string>
+    <string name="address_line_1">पता क्रम 1</string>
+    <string name="block">ब्लॉक</string>
+
+    <string name="pin_required">पिन *</string>
+    <string name="district_required">ज़िला *</string>
+    <string name="country_required">देश *</string>
+    <string name="state_required">राज्य *</string>
+    <string name="address_line_1_required">पता क्रम 1 *</string>
+    <string name="block_required">ब्लॉक *</string>
+
+    <string name="select_profile_image">एक प्रोफ़ाइल फ़ोटो चुनें</string>
+    <string name="change_mobile">मोबाइल नंबर बदलें</string>
+    <string name="forgot_password">पासवर्ड भूल गए</string>
+    <string name="forgot_password_message">अपना पासवर्ड रीसेट करने के लिए ओटीपी प्राप्त करने के हेतु अपना पंजीकृत मोबाइल नंबर दर्ज करें</string>
+    <string name="change_mobile_number_message">अपना मोबाइल नंबर बदलें के लिए ओटीपी प्राप्त करने के हेतु अपना पंजीकृत मोबाइल नंबर दर्ज करें</string>
+    <string name="accept_terms_conditions_and_privacy_policy"><![CDATA[जारी रखने के लिए नियम और शर्तें और गोपनीयता नीति स्वीकार करें]]></string>
+    <string name="enter_valid_mobile_number">एक वैध मोबाइल नंबर दर्ज करे</string>
+    <string name="verify_contact">संपर्क सत्यापित करें</string>
+    <string name="enter_4_digit_otp_sent_to_s">%s को भेजा गया 4 अंकों का ओटीपी दर्ज करें</string>
+    <string name="fill_all_the_fields">सभी फ़ील्ड भरे</string>
+    <string name="submit">सबमिट करें</string>
+    <string name="grievance">शिकायत</string>
+    <string name="suvidha">सुविधा</string>
+    <string name="sadhan">साधन</string>
+    <string name="sarvottam_prathaye">सर्वोत्तम पृथाए</string>
+    <string name="reset_password">पासवर्ड रीसेट</string>
+    <string name="faqs">सामान्य प्रश्न</string>
+    <string name="enter_valid_otp">मान्य ओटीपी दर्ज करें</string>
+    <string name="aadhar_card">आधार कार्ड</string>
+    <string name="aadhar_card_number">आधार कार्ड नंबर</string>
+    <string name="name_as_per_aadhar">आधार कार्ड के अनुसार नाम</string>
+    <string name="dob_as_per_aadhar">आधार कार्ड के अनुसार जन्म तिथि</string>
+    <string name="upload_front_image_of_aadhar">आधार कार्ड की फोटो अपलोड करे (सामने)</string>
+    <string name="upload_back_image_of_aadhar">आधार कार्ड की फोटो अपलोड करे (पीछे)</string>
+    <string name="aadhar_card_number_required">आधार कार्ड नंबर *</string>
+    <string name="name_as_per_aadhar_required">आधार कार्ड के अनुसार नाम *</string>
+    <string name="dob_as_per_aadhar_required">आधार कार्ड के अनुसार जन्म तिथि *</string>
+    <string name="upload_front_image_of_aadhar_required">आधार कार्ड की फोटो अपलोड करे (सामने) *</string>
+    <string name="upload_back_image_of_aadhar_required">आधार कार्ड की फोटो अपलोड करे (पीछे) *</string>
+    <string name="registered_address">पंजीकृत पता</string>
+    <string name="upload_underline"><u>अपलोड करें</u></string>
+    <string name="please_enter_following_details">कृपया निम्नलिखित विवरण दर्ज करें</string>
+    <string name="document">दस्तावेज़</string>
+
+    <string name="enter_valid_aadhar_number">एक मान्य आधार नंबर दर्ज करें</string>
+    <string name="enter_valid_aadhar_name">आधार के अनुसार नाम दर्ज करें</string>
+    <string name="enter_valid_aadhar_dob">आधार के अनुसार जन्मतिथि दर्ज करें</string>
+    <string name="enter_valid_aadhar_front_image">आधार फोनो चुनें (सामने)</string>
+    <string name="enter_valid_aadhar_back_image">आधार फोनो चुनें (पीछे)</string>
+
+    <string name="permission_required">अनुमति आवश्यक</string>
+    <string name="permission_required_message"><![CDATA[इस सुविधा के लिए स्थान अनुमति आवश्यक है। इसे फोन सेटिंग्स > ऐप्स > आजीविका एसएचजी एंटरप्राइज > अनुमतियों के तहत सक्षम किया जा सकता है]]></string>
+    <string name="go_to_setting">सेटिंग पर जाएं</string>
+    <string name="enter_country">देश दर्ज करें</string>
+    <string name="enter_state">राज्य दर्ज करें</string>
+    <string name="enter_city">ज़िला दर्ज करें</string>
+    <string name="enter_pin">पिन दर्ज करें</string>
+    <string name="enter_block">ब्लॉक दर्ज करें</string>
+    <string name="logout">लॉग आउट</string>
+    <string name="rate_us">हमें रेटिंग दें</string>
+    <string name="faq">सामान्य प्रश्न</string>
+    <string name="my_chat">मेरी चैट</string>
+    <string name="my_sales">मेरी बिक्री</string>
+    <string name="search">खोज</string>
+    <string name="gallery">गेलरी</string>
+    <string name="camera">कैमरा</string>
+    <string name="or">या</string>
+    <string name="youtube_link">यूट्यूब लिंक</string>
+    <string name="how_to_add_an_photo">आप फ़ोटो कैसे जोड़ना चाहेंगे?</string>
+
+    <string name="upload_document">दस्तावेज़ अपलोड करें</string>
+    <string name="notifications">सूचनाएं</string>
+    <string name="verified">सत्यापित</string>
+    <string name="unverified">असत्यापित</string>
+    <string name="profile">प्रोफ़ाइल</string>
+    <string name="total_rating_format">(%d)</string>
+    <string name="d_out_of_5">5 में से %.1f</string>
+    <string name="mobile_number_format">+91 %s</string>
+    <string name="documents">दस्तावेज़</string>
+    <string name="aadhar_card_file">aadhar_card.jpg</string>
+    <string name="farmer">किसान</string>
+    <string name="save_changes">परिवर्तनों को सुरक्षित करें</string>
+    <string name="address">पता</string>
+    <string name="address_required">पता *</string>
+    <string name="change_address">पता बदले</string>
+    <string name="edit_profile">प्रोफ़ाइल संपादित करें</string>
+    <string name="edit">एडिट करें</string>
+    <string name="rating_and_reviews">रेटिंग और रिव्यु</string>
+    <string name="select_interest">इंटरेस्ट आईडी चुनें</string>
+    <string name="version_s">संपादन %s</string>
+    <string name="select_five_interests">5 इंटरेस्ट चुनें</string>
+    <string name="matching_sellers">मैचमेकिंग सेलर</string>
+    <string name="chat">चैट</string>
+    <string name="my_favourite_individuals">मेरे पसंदीदा इंडिविजुअल</string>
+
+    <string name="buyer_id_">खरीदार आईडी:</string>
+    <string name="price_">कीमत:</string>
+    <string name="qty_">मात्रा:</string>
+    <string name="quantity_format">%s %s</string>
+    <string name="price_per_key_format">₹%s/%s</string>
+    <string name="add_new_sale">नई बिक्री जोड़ें</string>
+    <string name="sales">बिक्री</string>
+    <string name="add_products_underline"><u>उत्पाद जोड़ें</u></string>
+    <string name="feedback_for_buyer">खरीदार के लिए प्रतिक्रिया</string>
+    <string name="feedback_for_buyer_required">खरीदार के लिए प्रतिक्रिया *</string>
+    <string name="date_of_sale">बिक्री की तारीख</string>
+    <string name="clf_email_address">सीएलएफ ईमेल पता</string>
+    <string name="clf_phone_number">सीएलएफ फोन नंबर</string>
+    <string name="name_of_clf">सीएलएफ का नाम</string>
+
+    <string name="interest_quantity_format">मात्रा: %s %s.</string>
+    <string name="please_enter_at_least_one_product">कृपया कम से कम 1 उत्पाद चुनें</string>
+    <string name="please_add_a_review_for_this_sale">कृपया इस बिक्री के लिए एक समीक्षा जोड़ें</string>
+    <string name="please_rate_this_sale">कृपया इस बिक्री को रेट करें</string>
+    <string name="done">पूर्ण</string>
+    <string name="add_products">उत्पाद जोड़ें</string>
+    <string name="search_products">उत्पादों को खोंजे</string>
+    <string name="interests">इंटरेस्ट</string>
+    <string name="buyer_id">खरीदार आईडी:</string>
+    <string name="sale_detail">बिक्री विवरण</string>
+    <string name="select_a_clf">एक सीएलएफ चुनें</string>
+    <string name="contact_us">हमसे संपर्क करें</string>
+
+    <string name="about_us">हमारे बारे में</string>
+    <string name="about_us_message">उत्तराखंड राज्य ग्रामीण आजीविका मिशन के तहत संयुक्त राष्ट्र विकास कार्यक्रम (यूएनडीपी) की ओर से राज्य की ग्रामीण महिलाओं की आजीविका संवर्द्धन व संसाधन एकत्रीकरण के लिए सरकारी योजनाओं की जानकारी देने वाला आनलाइन प्लेटफॉर्म आजीविका एप के रुप में विकसित किया गया है। उत्तराखंड आजीविका मेप को उत्तराखंड के मुख्यमंत्री ने 18 जनवरी, 2021 को जारी किया था। इस एप मे राष्ट्रीय ग्रामीण आजीविका मिशन से संबंधित सभी आवश्यक जानकारी, स्वयं सहायता समूह से जुड़ी महिलाओं की समस्याएं व उनका फीडबैक रहता है, जिस कारण यह आजीविका संवर्द्धन के लिए श्रेष्ठ व्यवहार भी है। इस एप का दूसरा संस्करण आजीविका 2.0 के नाम से आ रहा है, जो कि स्वयं सहायता समूहों द्वारा उत्पादित वस्तुओं के विपणन का मार्केटप्लेस प्लेटफार्म है, ताकि स्वयं सहायता समूहों के जरिये ग्रामीण अर्थव्यवस्था को गतिशील किया जा सके।</string>
+
+    <string name="raise_tickets">टिकट रेज करे</string>
+    <string name="select_issue">समस्या का चयन करें</string>
+    <string name="explain_your_concern">अपनी चिंता स्पष्ट करें</string>
+    <string name="select_issue_required">समस्या का चयन करें *</string>
+    <string name="explain_your_concern_required">अपनी चिंता स्पष्ट करें *</string>
+    <string name="survey">सर्वेक्षण</string>
+    <string name="ticket_no">टिकट संख्या:</string>
+    <string name="created_on">बनाया गया:</string>
+    <string name="open">खुला है</string>
+    <string name="closed">बंद</string>
+    <string name="type_message_here">यहां संदेश टाइप करें</string>
+    <string name="you">आप</string>
+    <string name="aajeevika">आजीविका</string>
+    <string name="take_a_survey">एक सर्वेक्षण ले</string>
+    <string name="survey_expired">सर्वेक्षण समाप्त</string>
+    <string name="expired">समाप्त</string>
+    <string name="published_on">प्रकाशित हुआ:</string>
+    <string name="expire_on">समाप्त हुआ:</string>
+
+    <string name="ticket_closed_message">यह टिकट बंद कर दिया गया है। यदि आपकी समस्या का समाधान नहीं होता है, तो एक नया टिकट खोलें।</string>
+    <string name="share_your_number">अपना नंबर साझा करें</string>
+    <string name="no_data_found">डेटा नहीं मिला</string>
+    <string name="how_can_we_help_nyou_today">आज़ हम आपकी किस प्रकार सहायता कर सकते हैं</string>
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="interestImage"
+            type="String" />
+
+        <variable
+            name="interestName"
+            type="String" />
+
+        <variable
+            name="isSelected"
+            type="boolean" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@{ isSelected? @drawable/outline_w3_green_r8: @drawable/outline_w3_white_r8, default= @drawable/outline_w3_white_r8 }">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/product_image_value"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:layout_margin="12dp"
+                android:src="@drawable/image_placeholder"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:loadImageFromNetwork="@{ interestImage }"
+                app:placeholder="@{ @drawable/image_placeholder }" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:text="@{ interestName }"
+                android:textColor="@{ isSelected? @color/green: @color/gray_600, default=@color/gray_600 }"
+                android:textSize="18sp"
+                app:fontFamily="@font/sarabun_bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/product_image_value"
+                app:layout_constraintEnd_toStartOf="@id/check_mark_img"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/product_image_value"
+                app:layout_constraintTop_toTopOf="@id/product_image_value"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <ImageView
+                android:id="@+id/check_mark_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/check_mark_img"
+                android:visibility="@{ isSelected? View.VISIBLE: View.GONE, default=gone }"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
